@@ -1,0 +1,17 @@
+{
+  "name": "mapbox-dist",
+  "version": "0.0.0",
+  "authors": [
+    "Ruben Vermeersch <ruben@rocketeer.be>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "build.sh",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
