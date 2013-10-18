@@ -22,5 +22,5 @@ rsync -av --delete \
 cp node_modules/mapbox.js/LICENSE.md .
 
 git add -A .
-git commit -a -m "Build mapbox.js $1"
-git tag $1
+git commit -a -m "Build mapbox.js v$1"
+git tag v$1
