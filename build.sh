@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+if [ "$#" -eq 0 ]; then
+    echo "Usage: build.sh <version>"
+    exit
+fi
+
+npm install mapbox.js@$1
+
 pushd node_modules/mapbox.js/
 make
 popd
@@ -7,4 +14,5 @@ popd
 rsync -av --delete \
       --exclude node_modules/ --exclude bower.json --exclude build.sh \
       --exclude package.json --exclude .git --exclude .gitignore \
+      --exclude README.md \
       node_modules/mapbox.js/dist/ .
