@@ -19,6 +19,8 @@ rsync -av --delete \
       --exclude README.md \
       node_modules/mapbox.js/dist/ .
 
+cp node_modules/mapbox.js/LICENSE.md .
+
 git add -A .
 git commit -a -m "Build mapbox.js $1"
 git tag $1
