@@ -1,6 +1,6 @@
 {
   "name": "mapbox-dist",
-  "version": "1.5.2",
+  "version": "1.6.0",
   "description": "Compiled version of Mapbox.js.",
   "main": "index.js",
   "scripts": {
