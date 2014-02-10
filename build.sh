@@ -43,7 +43,6 @@ cat > bower.json << EOF
     "Ruben Vermeersch <ruben@rocketeer.be>"
   ],
   "license": "MIT",
-  "private": true,
   "ignore": [
     "**/.*",
     "build.sh",
