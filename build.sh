@@ -21,6 +21,40 @@ rsync -av --delete \
 
 cp node_modules/mapbox.js/LICENSE.md .
 
+cat > package.json << EOF
+{
+  "name": "mapbox-dist",
+  "version": "$1",
+  "description": "Compiled version of Mapbox.js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
+EOF
+
+cat > bower.json << EOF
+{
+  "name": "mapbox-dist",
+  "version": "$1",
+  "authors": [
+    "Ruben Vermeersch <ruben@rocketeer.be>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "build.sh",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
+EOF
+
 git add -A .
 git commit -a -m "Build mapbox.js v$1"
 git tag v$1
